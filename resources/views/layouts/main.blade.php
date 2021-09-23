@@ -33,6 +33,8 @@
         </nav>
 
         <main class="container my-4">
+            @yield('breadcrumb')
+            
             @include('includes/flash-message')
 
             @yield('content')
