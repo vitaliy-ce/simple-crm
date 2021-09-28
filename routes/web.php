@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +13,10 @@ use App\Http\Controllers\SiteController;
 |
 */
 
-Route::get('/', function () {
-    return view('index/home');
-})->name('home');
+Auth::routes();
 
 // Route::get('/sites', 'App\Http\Controllers\SiteController@index')->name('sites');
 // Route::get('/sites/{id}', 'App\Http\Controllers\SiteController@show')->name('sites.show');
-Route::resource('sites', SiteController::class);
+Route::resource('sites', App\Http\Controllers\SiteController::class);
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
