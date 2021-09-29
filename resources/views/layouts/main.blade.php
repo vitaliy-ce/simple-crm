@@ -42,8 +42,13 @@
             </div>
         </nav>
 
+        <div class="breadcrumbs-wrap">
+            <div class="container">
+                @yield('breadcrumb')
+            </div>
+        </div>
+
         <main class="container my-4">
-            @yield('breadcrumb')
             
             @include('includes/flash-message')
 

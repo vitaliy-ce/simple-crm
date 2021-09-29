@@ -7,6 +7,24 @@ svg.feather {
     margin-right: 5px;
 }
 
+.badge {
+    padding: 5px 10px;
+    font-weight: 500;
+    font-family: monospace;
+}
+.breadcrumbs-wrap {
+    background: #e9ecef;
+}
+.breadcrumbs-wrap .breadcrumb {
+    background: transparent;
+    padding: 10px 0px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.breadcrumb a {
+    color: #000;
+}
+
 .card {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     border-color: #DBE0E4;
