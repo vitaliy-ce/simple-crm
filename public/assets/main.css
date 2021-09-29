@@ -1,3 +1,12 @@
+svg.feather {
+    width: 20px;
+    vertical-align: top;
+}
+
+.nav-link .feather {
+    margin-right: 5px;
+}
+
 .card {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     border-color: #DBE0E4;
