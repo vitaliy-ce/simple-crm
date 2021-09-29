@@ -7,6 +7,7 @@
         <title>@yield('title', Request::path()) — {{ config('app.name', 'Laravel') }}</title>
         
         <link rel="stylesheet" href="{{ asset('/assets/bootstrap-4.6.0/css/bootstrap.min.css') }}">
+        @yield('styles')
         <link rel="stylesheet" href="{{ asset('/assets/main.css') }}">
     </head>
 
@@ -56,9 +57,10 @@
         </main>
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="{{ asset('/assets/bootstrap-4.6.0/js/bootstrap.bundle.min.js') }}"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        @yield('scripts')
         <script src="{{ asset('/assets/main.js') }}"></script>
     </body>
 </html>

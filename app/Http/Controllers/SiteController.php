@@ -129,4 +129,25 @@ class SiteController extends Controller
 
         return redirect()->route('sites.index')->with('success', 'Сайт удален');
     }
+
+    public function datatables_data(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = Site::orderBy('id', 'desc')->get();
+            
+            return datatables()
+                ->of($data)
+                ->editColumn('domain', function ($row) {
+                    return ' <a href="'.route('sites.show', $row->id).'">'.$row->domain.'</a>';
+                })
+                ->addColumn('created_f', function ($row) {
+                    return '<span class="badge badge-secondary">'.$row->created_at->format('d.m.Y H:i').'</span>';
+                })
+                ->addColumn('updated_f', function ($row) {
+                    return '<span class="badge badge-secondary">'.$row->updated_at->format('d.m.Y H:i').'</span>';
+                })
+                ->rawColumns(['domain', 'created_f', 'updated_f'])
+                ->toJson();
+        }
+    }
 }

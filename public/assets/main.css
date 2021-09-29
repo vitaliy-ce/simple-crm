@@ -45,3 +45,29 @@ svg.feather {
 .table td, .table th {
     padding: 10px 15px;
 }
+
+.dataTables_length,
+.dataTables_filter {
+    margin: 15px;
+    font-size: 14px;
+}
+.dataTables_length label,
+.dataTables_filter label {
+    margin-bottom: 0;
+}
+.dataTables_info,
+.dataTables_paginate {
+    margin: 10px 15px;
+    font-size: 14px;
+}
+.table.dataTable td, 
+.table.dataTable  th {
+    padding: 10px 15px;
+}
+table.dataTable thead th, 
+table.dataTable thead td {
+    border-bottom: none;
+}
+table.dataTable.no-footer {
+    border-bottom-color: #dee2e6;
+}
