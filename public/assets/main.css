@@ -60,6 +60,9 @@ svg.feather {
     margin: 10px 15px;
     font-size: 14px;
 }
+table.dataTable {
+    width: 100% !important;
+}
 .table.dataTable td, 
 .table.dataTable  th {
     padding: 10px 15px;
@@ -70,4 +73,44 @@ table.dataTable thead td {
 }
 table.dataTable.no-footer {
     border-bottom-color: #dee2e6;
+}
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+    border-color: #dee2e6;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 4px;
+    padding: 4px 15px;
+    box-shadow: none !important;
+    transition: all 0.2s;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #212529 !important;
+    background: #f2f2f2;
+    border-color: #f2f2f2;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    color: #fff !important;
+    background: #007bff;
+    border-color: #007bff;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+    background: #0069d9;
+    border-color: #0062cc;
+}
+.dataTables_wrapper .dataTables_processing {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 0;
+    background: rgba(255, 255, 255, 0.8);
+    background-image: url(/image/loader-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    border-radius: 4px;
 }
