@@ -276,6 +276,17 @@
                 </div>
             </div>
         </div>
+        
+        <div class="card">
+            <div class="card-header">
+                Дополнительная информация
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <textarea name="extra_info" id="extra_info" rows="5" class="form-control">{{ $site->extra_info }}</textarea>
+                </div>
+            </div>
+        </div>
 
         <div class="mt-4">
             <button type="submit" class="btn btn-primary">Сохранить</button>

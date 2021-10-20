@@ -14,25 +14,27 @@ class AddFieldsSitesTable extends Migration
     public function up()
     {
         Schema::table('sites', function (Blueprint $table) {
-            $table->string('hosting_host', 255)->default('');
-            $table->string('hosting_login', 255)->default('');
-            $table->string('hosting_pass', 255)->default('');
+            $table->string('hosting_host', 255)->nullable();
+            $table->string('hosting_login', 255)->nullable();
+            $table->string('hosting_pass', 255)->nullable();
 
-            $table->string('ssh_host', 255)->default('');
-            $table->string('ssh_login', 255)->default('');
-            $table->string('ssh_pass', 255)->default('');
+            $table->string('ssh_host', 255)->nullable();
+            $table->string('ssh_login', 255)->nullable();
+            $table->string('ssh_pass', 255)->nullable();
 
-            $table->string('ftp_host', 255)->default('');
-            $table->string('ftp_login', 255)->default('');
-            $table->string('ftp_pass', 255)->default('');
+            $table->string('ftp_host', 255)->nullable();
+            $table->string('ftp_login', 255)->nullable();
+            $table->string('ftp_pass', 255)->nullable();
 
-            $table->string('db_host', 255)->default('');
-            $table->string('db_login', 255)->default('');
-            $table->string('db_pass', 255)->default('');
-            
-            $table->string('admin_host', 255)->default('');
-            $table->string('admin_login', 255)->default('');
-            $table->string('admin_pass', 255)->default('');
+            $table->string('db_host', 255)->nullable();
+            $table->string('db_login', 255)->nullable();
+            $table->string('db_pass', 255)->nullable();
+
+            $table->string('admin_host', 255)->nullable();
+            $table->string('admin_login', 255)->nullable();
+            $table->string('admin_pass', 255)->nullable();
+
+            $table->text('extra_info')->nullable();
         });
     }
 
@@ -63,6 +65,8 @@ class AddFieldsSitesTable extends Migration
             $table->dropColumn('admin_host');
             $table->dropColumn('admin_login');
             $table->dropColumn('admin_pass');
+            
+            $table->dropColumn('extra_info');
         });
     }
 }

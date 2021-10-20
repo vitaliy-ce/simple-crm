@@ -45,6 +45,8 @@ class SiteFactory extends Factory
             'admin_host'    => $this->faker->domainName(),
             'admin_login'   => $this->faker->userName(),
             'admin_pass'    => $this->faker->password(),
+
+            'extra_info'    => $this->faker->realText(rand(100,200)),
         ];
     }
 }
