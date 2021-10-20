@@ -138,7 +138,7 @@ class SiteController extends Controller
             return datatables()
                 ->of($data)
                 ->editColumn('domain', function ($row) {
-                    return ' <a href="'.route('sites.show', $row->id).'">'.$row->domain.'</a>';
+                    return ' <a href="'.route('sites.edit', $row->id).'">'.$row->domain.'</a>';
                 })
                 ->addColumn('created_f', function ($row) {
                     return '<span class="badge badge-secondary">'.$row->created_at->format('d.m.Y H:i').'</span>';
