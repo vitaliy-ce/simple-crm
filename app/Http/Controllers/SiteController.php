@@ -111,6 +111,8 @@ class SiteController extends Controller
         $site->admin_login     = $request->admin_login;
         $site->admin_pass      = $request->admin_pass;
 
+        $site->extra_info      = $request->extra_info;
+
         $site->save();
 
         return redirect()->route('sites.show', $id)->with('success', 'Изменения сохранены');
